@@ -1,0 +1,14 @@
+<htpl>
+  <!-- example-gadget: tests for the template's three functions.
+       Run with `htpl test` from this repo's root. 8 assertions. -->
+  <import src="./gadget.htpl" />
+
+  <var name="_t01" value="assert_eq(shout('hello'), 'HELLO!')" />
+  <var name="_t02" value="assert_eq(shout(''), '!')" />
+  <var name="_t03" value="assert_eq(shout('HtPl'), 'HTPL!')" />
+  <var name="_t04" value="assert_eq(wrap('b', 'hi'), '&lt;b&gt;hi&lt;/b&gt;')" />
+  <var name="_t05" value="assert_eq(wrap('em', ''), '&lt;em&gt;&lt;/em&gt;')" />
+  <var name="_t06" value="assert_eq(repeat_text('ab', 3), 'ababab')" />
+  <var name="_t07" value="assert_eq(repeat_text('x', 1), 'x')" />
+  <var name="_t08" value="assert_eq(repeat_text('x', 0), '')" />
+</htpl>

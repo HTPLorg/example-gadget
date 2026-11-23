@@ -1,0 +1,26 @@
+<htpl>
+  <!-- example-gadget 0.1.0 — a template gadget. Copy this repo to
+       start your own gadget: rename it in htpl.json, replace these
+       functions with yours, and keep the two required files:
+       htpl.json (META) and gadget.htpl (ENTRY). The functions below
+       are deliberately tiny so the shape of a gadget is what you
+       see, not the logic.
+       Public API:
+         shout(text) -> string
+           Uppercase text with an exclamation mark.
+         wrap(tag, text) -> string
+           Wrap text in an HTML tag.
+         repeat_text(text, n) -> string
+           Repeat text n times. -->
+  <func name="shout" params="text: string" returns="string">
+    <return value="upper(text) + '!'" />
+  </func>
+
+  <func name="wrap" params="tag: string, text: string" returns="string">
+    <return value="'&lt;' + tag + '&gt;' + text + '&lt;/' + tag + '&gt;'" />
+  </func>
+
+  <func name="repeat_text" params="text: string, n: number" returns="string">
+    <return value="str_repeat(text, n)" />
+  </func>
+</htpl>
